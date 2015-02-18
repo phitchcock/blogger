@@ -1,1 +1,7 @@
-_form.html.erb
+<%= form_for(@article) do |f| %>
+  <div>
+    <%= f.text_field :title %>
+    <%= f.text_area :body %>
+    <%= f.submit %>
+  </div>
+<% end %>
