@@ -5,3 +5,10 @@
 
 <h3>Post a Comment</h3>
 <%= render partial: 'comments/form' %>
+
+<p>
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
